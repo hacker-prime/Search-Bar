@@ -1,0 +1,311 @@
+#search-box {
+    position: relative;
+    width: 80%;
+    margin: 0;
+    right:-1%;
+    }
+    
+    #search-form 
+    {
+    height: 40px;
+    border: 1px solid #999;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 8px 6px -10px #FF4444;
+
+    }
+    
+    #identify-text 
+    {
+    font-size: 14px;
+    color: #ddd;
+    border-width: 0;
+    background: transparent;
+    }
+    
+    #search-box input[type="text"]
+    {
+    width: 90%;
+    padding: 11px 0 12px 1em;
+    color: #333;
+    outline: none;
+    }
+    
+    #search-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 42px;
+    width: 80px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    line-height: 42px;
+    border-width: 0;
+    background-color:#FF4444;
+    -webkit-border-radius: 0px 5px 5px 0px;
+    -moz-border-radius: 0px 5px 5px 0px;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    }
+
+    /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav   */
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #FF4444;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+      
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+        font-family: "Lato", sans-serif;
+        text-align: center;
+
+
+      }
+      
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+      
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 3%;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
+
+      .navButton .right { 
+        right: 3%;
+        top: 1%;
+        position: absolute;
+        color:#FF4444;
+        font-size: xx-large;
+    }
+
+    /* https://stackoverflow.com/questions/2041388/how-to-remove-the-underline-for-anchorslinks */
+    a, u {
+      text-decoration: none;
+      color:black;
+  }
+
+/*------------- Cards ----------Used to display product information---------*/
+  .cards {
+    /* margin: 0 auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: auto;
+    gap: 20px;
+    font-family: sans-serif;
+    padding-top: 40px; */
+
+    /* margin: 0 auto; */
+    /* max-width: 1000px; */
+    /* width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: auto;
+    gap: 20px;
+    font-family: sans-serif; */
+    /* position: absolute;  Anytime this is activated the div/card stretches/expands particularly to the right*/ 
+    /* right: 0%;
+    top: 20%; */
+    /* https://stackoverflow.com/questions/9735513/how-to-place-a-div-on-the-right-side-with-absolute-position */
+    /* transform: translateY(18%); */
+}
+
+.cards {
+  /* margin: 0 auto;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: auto;
+  gap: 20px;
+  font-family: sans-serif;
+  padding-top: 40px; */
+
+  margin: 0 auto;
+  /* max-width: 1000px; */
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: auto;
+  gap: 20px;
+  font-family: sans-serif;
+  /* position: absolute;  Anytime this is activated the div/card stretches/expands particularly to the right*/ 
+  /* right: 0%;
+  top: 20%; */
+  /* https://stackoverflow.com/questions/9735513/how-to-place-a-div-on-the-right-side-with-absolute-position */
+  /* transform: translateY(18%); */
+  /* https://stackoverflow.com/questions/20993947/prevent-a-specific-child-div-from-expanding-the-parent-div */
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+}
+
+.cards * {
+    box-sizing: border-box;
+}
+
+.card__image {
+    width: 100%;
+    /* height: 150px; */
+    object-fit: cover;
+    display: block;
+    border-top: 2px solid #333333;
+    border-right: 2px solid #333333;
+    border-left: 2px solid #333333;
+}
+
+.card__content {
+    line-height: 1.5;
+    font-size: 0.9em;
+    padding: 15px;
+    /* background: #fafafa; */
+    border-right: 2px solid #333333;
+    border-left: 2px solid #333333;
+    text-align: center;
+
+}
+
+.card__content > p:first-of-type {
+    margin-top: 0;
+}
+
+.card__content > p:last-of-type {
+    margin-bottom: 0;
+}
+
+.card__info {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #555555;
+    /* background: #eeeeee; */
+    font-size: 0.8em;
+    border-bottom: 2px solid #333333;
+    border-right: 2px solid #333333;
+    border-left: 2px solid #333333;
+}
+
+.card__info i {
+    font-size: 0.9em;
+    margin-right: 8px;
+}
+
+.card__link {
+    color: #64968c;
+    text-decoration: none;
+}
+
+.card__link:hover {
+    text-decoration: underline;
+}
+
+.formCart{
+
+  position: absolute;
+  right: 3%;
+  top: 7.5%;
+}
+
+.cart{
+  color:#FF4444;
+  font-size: xx-large;
+  /* https://stackoverflow.com/questions/16239504/how-to-position-few-spans-under-each-other/16239626 */
+  float: right;
+  clear: right;
+}
+
+.cartQuantity{
+  /* https://stackoverflow.com/questions/16239504/how-to-position-few-spans-under-each-other/16239626 */
+  float: right;
+  clear: right;
+  padding-right: 10px;
+  padding-top: 10px;
+  color: #FF4444;
+}
+
+/* https://stackoverflow.com/questions/54613785/how-to-stop-dropdown-menu-from-pushing-content-down */
+.searchList{
+  position: absolute;
+  width: 90%;
+  background:white;
+  z-index: 1;
+}
+
+.noData{
+  position: absolute;
+
+}
+
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .cards {
+    width: 50%;
+    top: 10%;
+}
+
+
+}
+
+
+@media only screen and (orientation: landscape) and (max-width: 640px) {
+  .cards {
+   
+    width: 35%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: auto;
+    font-family: sans-serif;
+    /* transform: translateY(18%); */
+    position: absolute;
+    top: 15%;
+  
+}
+
+.formCart {
+  position: absolute;
+  right: 3%;
+  top: 15%;
+}
+}
+  
+/* https://stackoverflow.com/questions/7560832/how-to-center-a-button-within-a-div */
+.cartButton{
+  margin: 0 auto;
+  background-color: #FF4444;
+  border: none;
+  color: white;
+  padding: 10px 27px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
